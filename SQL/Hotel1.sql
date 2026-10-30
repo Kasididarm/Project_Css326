@@ -8,4 +8,6 @@ INSERT into customer(name,customer_email,customer_phone){
     VALUE('Alice Johnson','alice@emailple.com','555-1234');
     VALUE ('Bob Smith','bob@email.com',555-5687);
 }
-INSERT into booking(customer_id,room_id,check_in_date,check_out_date){}
+INSERT into booking(customer_id,room_id,check_in_date,check_out_date){
+    VALUE(1,1,'2024-06-01','2024-06-05');
+}
