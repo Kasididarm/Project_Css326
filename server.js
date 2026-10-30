@@ -1,7 +1,7 @@
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '.env') });   // load .env first
 const express = require('express');
-const booksRouter = require('./routes/books');
+const booksRouter = require('./routes/hotel');
 const customersRouter = require('./routes/customers');
 
 const app = express();
