@@ -6,5 +6,5 @@ INSERRT into room (name,room_avaliable,room_number){
 }
 INSERT into customer(name,customer_email,customer_phone){
     VALUE('Alice Johnson','alice@emailple.com','555-1234');
-    
+    VALUE ('Bob Smith','bob@email.com',555-5687);
 }
