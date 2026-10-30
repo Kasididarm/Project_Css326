@@ -13,3 +13,8 @@ INSERT into booking(customer_id,room_id,check_in_date,check_out_date){
     VALUe(2,2,'2024-06-10','2024');
     VALUE(1,3,'2024-06-15','2024-06-20')
 }
+INSERT into payment(booking_id,amount,payment_date){
+    VALUE(1,500.00,'2024-06,01');
+    VALUE(2,300.00,'2024-06-10');
+    VALUE(3,400.00,'2024-06-15');
+}
