@@ -1,12 +1,50 @@
 USE hotel;
-INSERRT into room (name,room_avaliable,room_number){
-    VALUE('DELUX',1,101)
-    VALUE('John Doe',1,102)
-    VALUE('Jane Smith',1,103)
+CREATE TABLE room(
+    id INT PRIMARY KRY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    room_avaliable BOOLEAN NOT NULL,
+    room_number INT NOT NULL,
+    PRIMARY KEY(id),
+)
+CREATE TABLE customer(
+    id INT PRIMARY KRY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    customer_email VARCHAR(50) NOT NULL,
+    cutomer_phone VARCHAR(15) NOT NULL,
+    PRIMARY KEY(id),
+)
+CREATE TABLE booking(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT NOT NULL,
+    room_id INT NOT NULL,
+    check_in_date DATE NOT NULL,
+    check_out_date DATE NOT NULL,
+    FOREIGN KEY(customer_id) REFERENCES customer(id),
+    FOREIGN KEY(room_id) REFERENCES room(id)
+)
+CREATE TABLE payment(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    booking_id INT NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    payment_date DATE NOT NULL,
+    FOREIGN KEY (booking_id) REFERENCES booking(id);
+)
+CREATE TABLE room_type(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    price DECIMAL (10,2) NOT NULL
+)
+
+
+INSERT into room (id,name,room_avaliable,room_number){
+    VALUE(1,'DELUX',1,101)
+    VALUE(2,'John Doe',1,102)
+    VALUE(3,'Jane Smith',1,103)
 }
-INSERT into customer(name,customer_email,customer_phone){
-    VALUE('Alice Johnson','alice@emailple.com','555-1234');
-    VALUE ('Bob Smith','bob@email.com',555-5687);
+INSERT into customer(id,name,customer_email,customer_phone){
+    VALUE(1,'Alice Johnson','alice@emailple.com','555-1234');
+    VALUE (2,'Bob Smith','bob@email.com','555-5687');
 }
 INSERT into booking(customer_id,room_id,check_in_date,check_out_date){
     VALUE(1,1,'2024-06-01','2024-06-05');
