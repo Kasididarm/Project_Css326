@@ -35,12 +35,7 @@ CREATE TABLE room_type(
     description VARCHAR(255) NOT NULL,
     price DECIMAL (10,2) NOT NULL
 )
-CREATE PROCEDURE check_room_availability(IN room_number INT,OUT room_available BOOLEAN)
-BEGIN
-    SELECT room_avaliable INTO room_available
-    FROM room
-    WHERE room_number = room_number;
-END
+
 
 INSERT into room (name,room_avaliable,room_number){
     VALUE('DELUX',1,101)
