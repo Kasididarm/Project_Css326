@@ -1,5 +1,42 @@
 USE hotel;
-INSERRT into room (name,room_avaliable,room_number){
+CREATE TABLE room(
+    id INT PRIMARY KRY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    room_avaliable BOOLEAN NOT NULL,
+    room_number INT NOT NULL,
+    PRIMARY KEY(id),
+)
+CREATE TABLE customer(
+    id INT PRIMARY KRY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    customer_email VARCHAR(50) NOT NULL,
+    cutomer_phone VARCHAR(15) NOT NULL,
+    PRIMARY KEY(id),
+)
+CREATE TABLE booking(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT NOT NULL,
+    room_id INT NOT NULL,
+    check_in_date DATE NOT NULL,
+    check_out_date DATE NOT NULL,
+    FOREIGN KEY(customer_id) REFERENCES customer(id),
+    FOREIGN KEY(room_id) REFERENCES room(id)
+)
+CREATE TABLE payment(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    booking_id INT NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    payment_date DATE NOT NULL,
+    FOREIGN KEY (booking_id) REFERENCES booking(id);
+)
+CREATE PROCEDURE check_room_availability(IN room_number INT,OUT room_available BOOLEAN)
+BEGIN
+    SELECT room_avaliable INTO room_available
+    FROM room
+    WHERE room_number = room_number;
+END
+
+INSERT into room (name,room_avaliable,room_number){
     VALUE('DELUX',1,101)
     VALUE('John Doe',1,102)
     VALUE('Jane Smith',1,103)
