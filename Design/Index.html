@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <head>
-    <meta name="viewpower">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 </head>
 <body>
     <div class="Lobby">
         <h1>Data Management Hotel</h1>
-        <section class="check in check out">
-            <h1>Name Customer</h1>
-            <input type="text" id="customer"/>
+        <section class="check-in-out">
+            <div>
+                <label for="fname">first name:</label>
+                <input type="text" id="fname" name="fname" placeholder="harry">
+            </div>
+
+            <div>
+                <label for="lname">last name:</label>
+                <input type="text" id="lname" name="lname" placeholder="potter">
+            </div>
+            
             <data class="check in check out date">
                 <h2>Check In</h2>
                 <input type ='date' id="checkin"/>
                 <h2>Check Out</h2>
                 <input type='date' id="checkout"/>
             </data>
+            
             <data class="room">
-                <h2>Room</h2>
-                <input type="text" id="room"/>
+                <label for="room">room</label>
+                <select id="room" name="room">
+                    <option choice ="standard">standard</option>
+                    <option choice ="superior">superior</option>
+                    <option choice ="deluxe">deluxe</option>
+                    <option choice ="suite">suite</option>
+                    <option choice ="studio">studio</option>
+                </select>
             </data>
             
         </section>
