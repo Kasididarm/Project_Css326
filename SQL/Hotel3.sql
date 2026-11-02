@@ -12,7 +12,7 @@ BEGIN
     FROM customer
     WHERE email = customer_email;
 END
-TRANCATE TABLE room;
+TRUNCATE TABLE room;
 TRUNCATE TABLE customer;
 CREATE PROCEDURE app_user(IN username VARCHAR(50),IN password VARCHAR(255),IN role ENUM('admin','staff','user'))
 BEGIN
