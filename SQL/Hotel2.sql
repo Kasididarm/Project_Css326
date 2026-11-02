@@ -1,4 +1,4 @@
-Use hotel;
+USE hotel;
 SELECT * FROM customer WHERE customer_email=? and customer_phone=?;
 SELECT * FROM room_type WHERE name=? and price=?;
 UPDATE booking SET check_in_date=?,check_out_date=? WHERE customer_id=? and
