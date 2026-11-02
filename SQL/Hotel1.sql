@@ -60,3 +60,9 @@ INSERT into admin(id ,name,admin_email,admin_phone){
     VALUE(1,'admin','admin@email.com','555-0000');
     VALUE(2,'manager','maneger@email.com','555-1111');
 }
+INSERT into room_type(id,name,description,price){
+    VALUE(1,'Standard','Standard rooom with basic amenities ',100.00);
+    VALUE(2,'Superior','Superior room with additonal feature ',120.00);
+    VALUE(3,'Deluxe','Deluxe room with additional amenities',150.00);
+    VALUE(4,'Suite')
+}
