@@ -11,3 +11,5 @@ BEGIN
     FROM customer
     WHERE email = customer_email;
 END
+TRANCATE TABLE room;
+TRUNCATE TABLE customer;
