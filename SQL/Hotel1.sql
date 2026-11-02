@@ -63,6 +63,7 @@ INSERT into room_type(id,name,description,price){
     VALUE(4,'Suite','Suite room with luxurious features ',210.00);
     VALUE(5,'Studio','Studio room with modern design and amenities',219.00);
 }
+INSERT into 
 INSERT into room(room_type_id,room_number) VALUES
     (1,101),
     (2,102),
