@@ -1,4 +1,5 @@
 USE hotel;
+CREATE DATABSE IF NOT EXISTS hotel;
 CREATE TABLE room(
     id INT PRIMARY KRY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
@@ -64,5 +65,6 @@ INSERT into room_type(id,name,description,price){
     VALUE(1,'Standard','Standard rooom with basic amenities ',100.00);
     VALUE(2,'Superior','Superior room with additonal feature ',120.00);
     VALUE(3,'Deluxe','Deluxe room with additional amenities',150.00);
-    VALUE(4,'Suite')
+    VALUE(4,'Suite','Suite room with luxurious features ',210.00);
+    VALUE(5,'Studio','Studio room with modern design and amenities',219.00);
 }
