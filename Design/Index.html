@@ -1,57 +1,70 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Data Management Hotel</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="Lobby">
         <h1>Data Management Hotel</h1>
+
+    <form>
         <section class="check-in-out">
+            
             <div>
-                <label>Mr.</label>
-                <input type="radio" name="title" value="Mr.">
+                <label>
+                    <input type="radio" name="title" value="Mr.">
+                    Mr.
+                </label>
 
-                <label>Ms.</label>
-                <input type="radio" name="title" value="Ms.">
+                <label>
+                    <input type="radio" name="title" value="Ms.">
+                    Ms.
+                </label>
                 
-                <label>Mrs.</label>
-                <input type="radio" name="title" value="Mrs.">
-
+                <label>
+                    <input type="radio" name="title" value="Mrs.">
+                    Mrs.
+                </label>
             </div>
+
             <div>
                 <label for="fname">first name:</label>
-                <input type="text" id="fname" name="fname" placeholder="harry">
+                <input type="text" id="fname" name="fname" placeholder="harry" required>
             </div>
 
             <div>
                 <label for="lname">last name:</label>
-                <input type="text" id="lname" name="lname" placeholder="potter">
+                <input type="text" id="lname" name="lname" placeholder="potter" required>
             </div>
-            
-            <data class="check in check out date">
-                <h2>Check In</h2>
-                <input type ='date' id="checkin"/>
-                <h2>Check Out</h2>
-                <input type='date' id="checkout"/>
-            </data>
-            
-            
+
+             <div class="booking_date">
+                <h2><label for="checkin">Check In</label></h2>
+                <input type ="date" id="checkin" name="checkin" required>
+                <h2><label for="checkout">Check Out</label></h2>
+                <input type='date' id="checkout" name="checkout" required>
+            </div>
+
             <div class="room">
                 <h2><label for="room">room</label></h2>
                 <select id="room" name="room">
-                    <option choice ="standard">standard</option>
-                    <option choice ="superior">superior</option>
-                    <option choice ="deluxe">deluxe</option>
-                    <option choice ="suite">suite</option>
-                    <option choice ="studio">studio</option>
+                    <option value ="standard">standard</option>
+                    <option value ="superior">superior</option>
+                    <option value ="deluxe">deluxe</option>
+                    <option value ="suite">suite</option>
+                    <option value ="studio">studio</option>
                 </select>
             </div>
-            <br>
 
             <div>
                 <input type="submit">
             </div>
-            
-        </section>
-    </div>
+
+        </section>  
+    </form>     
+
 </body>
+</html>
