@@ -44,4 +44,10 @@ BEGIN
     SELECT COUNT(*) INTO v_overlap_count FROM booking WHERE room_id=p_room_id
     AND (p_check_in < check_out_date AND p_check_out > check_in_date);
     IF v_overlap_count>0 THEN 
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='room is already'
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='room is already for those dates';
+    END IF:
+    INSERT INTO booking(customer_id,room_id,check_in_date,check_out_date,status) VALUE(p_customer_id,p_room_id,p_check_in,p_check_out,'pending');
+    SET p_booking_id=LAST_INSERT_ID();
+
+    COMMIT;
+END
