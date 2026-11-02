@@ -16,6 +16,7 @@ TRUNCATE TABLE room;
 TRUNCATE TABLE customer;
 CREATE PROCEDURE app_user(IN username VARCHAR(50),IN password VARCHAR(255),IN role ENUM('admin','staff','user'))
 BEGIN
+     
     INSERT INTO app_user(username,password,role) VALUES(username,password,role);
 END
 CREATE PROCEDURE booking(IN p_customer_id INT,IN p_room_id INT,IN p_check_in DATE,IN p_check_out DATE)
