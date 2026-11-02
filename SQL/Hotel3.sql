@@ -4,3 +4,9 @@ BEGIN
     FROM room
     WHERE room_number = room_number;
 END
+CREATE PROCEDURE get_customer_details (IN customer_email VARCHAR(50))
+BEGIN
+    SELECT *
+    FROM customer
+    WHERE email = customer_email;
+END
