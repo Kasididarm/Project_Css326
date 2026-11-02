@@ -13,3 +13,7 @@ BEGIN
 END
 TRANCATE TABLE room;
 TRUNCATE TABLE customer;
+CREATE PROCEDURE app_user(IN username VARCHAR(50),IN password VARCHAR(255),IN role ENUM('admin','staff','user'))
+BEGIN
+    INSERT INTO app_user(username,password,role) VALUES(username,password,role);
+END
