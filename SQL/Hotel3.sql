@@ -17,3 +17,4 @@ CREATE PROCEDURE app_user(IN username VARCHAR(50),IN password VARCHAR(255),IN ro
 BEGIN
     INSERT INTO app_user(username,password,role) VALUES(username,password,role);
 END
+
