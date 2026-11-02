@@ -56,3 +56,7 @@ INSERT into payment(booking_id,amount,payment_date){
     VALUE(2,300.00,'2024-06-10');
     VALUE(3,400.00,'2024-06-15');
 }
+INSERT into admin(id ,name,admin_email,admin_phone){
+    VALUE(1,'admin','admin@email.com','555-0000');
+    VALUE(2,'manager','maneger@email.com','555-1111');
+}
