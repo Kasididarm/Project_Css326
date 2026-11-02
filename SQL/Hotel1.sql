@@ -38,11 +38,6 @@ CREATE TABLE room_type(
 )
 
 
-INSERT into room (id,name,room_avaliable,room_number){
-    VALUE(1,'DELUX',1,101)
-    VALUE(2,'John Doe',1,102)
-    VALUE(3,'Jane Smith',1,103)
-}
 INSERT into customer(id,name,customer_email,customer_phone){
     VALUE(1,'Alice Johnson','alice@emailple.com','555-1234');
     VALUE (2,'Bob Smith','bob@email.com','555-5687');
@@ -68,3 +63,9 @@ INSERT into room_type(id,name,description,price){
     VALUE(4,'Suite','Suite room with luxurious features ',210.00);
     VALUE(5,'Studio','Studio room with modern design and amenities',219.00);
 }
+INSERT into room(room_type_id,room_number) VALUES
+    (1,101),
+    (2,102),
+    (3,103),
+    (4,104),
+    (5,105);
