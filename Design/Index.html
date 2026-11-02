@@ -1,70 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Management Hotel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@538&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
+
 
 <body>
-    <div class="Lobby">
-        <h1>Data Management Hotel</h1>
 
-    <form>
-        <section class="check-in-out">
-            
-            <div>
-                <label>
-                    <input type="radio" name="title" value="Mr.">
-                    Mr.
-                </label>
+    <div class="hotel-card">
+        <div class="Lobby">
+            <h1>Data Management Hotel</h1>
 
-                <label>
-                    <input type="radio" name="title" value="Ms.">
-                    Ms.
-                </label>
-                
-                <label>
-                    <input type="radio" name="title" value="Mrs.">
-                    Mrs.
-                </label>
-            </div>
+            <h2 class="command">Please filled in your data</h2>
 
-            <div>
-                <label for="fname">first name:</label>
-                <input type="text" id="fname" name="fname" placeholder="harry" required>
-            </div>
+            <form>
+                <section class="check-in-out">
 
-            <div>
-                <label for="lname">last name:</label>
-                <input type="text" id="lname" name="lname" placeholder="potter" required>
-            </div>
+                    <div class="choosetitle">
+                        <label>
+                            <input type="radio" name="title" value="Mr.">
+                            Mr.
+                        </label>
 
-             <div class="booking_date">
-                <h2><label for="checkin">Check In</label></h2>
-                <input type ="date" id="checkin" name="checkin" required>
-                <h2><label for="checkout">Check Out</label></h2>
-                <input type='date' id="checkout" name="checkout" required>
-            </div>
+                        <label>
+                            <input type="radio" name="title" value="Ms.">
+                            Ms.
+                        </label>
 
-            <div class="room">
-                <h2><label for="room">room</label></h2>
-                <select id="room" name="room">
-                    <option value ="standard">Standard</option>
-                    <option value ="superior">Superior</option>
-                    <option value ="deluxe">Deluxe</option>
-                    <option value ="suite">Suite</option>
-                    <option value ="studio">Studio</option>
-                </select>
-            </div>
+                        <label>
+                            <input type="radio" name="title" value="Mrs.">
+                            Mrs.
+                        </label>
+                    </div>
 
-            <div>
-                <input type="submit">
-            </div>
+                    <div>
+                        <label for="fname">first name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="harry" required>
+                    </div>
 
-        </section>  
-    </form>     
+                    <div>
+                        <label for="lname">last name:</label>
+                        <input type="text" id="lname" name="lname" placeholder="potter" required>
+                    </div>
+
+                    <div class="booking_date">
+                        <h2><label for="checkin">Check In</label></h2>
+                        <input type="date" id="checkin" name="checkin" required>
+                        <h2><label for="checkout">Check Out</label></h2>
+                        <input type='date' id="checkout" name="checkout" required>
+                    </div>
+
+                    <div class="room">
+                        <h2><label for="room">room</label></h2>
+                        <select id="room" name="room">
+                            <option value="standard">standard</option>
+                            <option value="superior">superior</option>
+                            <option value="deluxe">deluxe</option>
+                            <option value="suite">suite</option>
+                            <option value="studio">studio</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+
+                </section>
+            </form>
+        </div>
+
+        <img class="hotel-cover" src="hotelcover.png">
+
+    </div>
 
 </body>
+
 </html>
