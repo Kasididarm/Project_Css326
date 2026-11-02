@@ -2,10 +2,10 @@ USE hotel;
 CREATE DATABSE IF NOT EXISTS hotel;
 CREATE TABLE room(
     id INT PRIMARY KRY AUTO_INCREMENT,
-    name VARCHAR(50) NOT NULL,
-    room_avaliable BOOLEAN NOT NULL,
-    room_number INT NOT NULL,
-    PRIMARY KEY(id),
+    room_type_id INT NOT NULL,
+    room_number INT NOT NULL UNIQUE,
+    status ENUM('available','booked') NOT NULL DEFAULT 'available',
+    FOREIGN KEY(room_type_id) REFERENCES room_type(id)
 )
 CREATE TABLE customer(
     id INT PRIMARY KRY AUTO_INCREMENT,
