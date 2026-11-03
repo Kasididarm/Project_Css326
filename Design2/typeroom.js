@@ -1,2 +1,7 @@
 const typeroom=document.getElementsByClassName('type room');
-typeroom.addEventListener()
+function room(){
+    typeroom.innerhtml=`
+    <li>
+      <button>cancel</button>
+    </li>`
+}
