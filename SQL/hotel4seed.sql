@@ -5,7 +5,7 @@ INSERT into customer(id,name,customer_email,customer_phone){
 }
 INSERT into booking(customer_id,room_id,check_in_date,check_out_date){
     VALUE(1,1,'2024-06-01','2024-06-05');
-    VALUe(2,2,'2024-06-10','2024');
+    VALUe(2,2,'2024-06-10','2024-06-13');
     VALUE(1,3,'2024-06-15','2024-06-20')
 }
 INSERT into payment(booking_id,amount,payment_date){
