@@ -3,7 +3,7 @@ require('dotenv').config({ path: path.join(__dirname, '.env') }); // load .env f
 
 const express = require('express'); 
 const hotelRouter = require('./routes/hotel'); 
-const customersRouter = require('./routes/customers'); 
+const customersRouter = require('./routes/customer'); 
 
 const app = express(); 
 
