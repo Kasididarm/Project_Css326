@@ -4,7 +4,7 @@ function room(){
     <ul>
         <li>
             <h2></h2>
-            <img src="">
+            <img src=""/>
             <button>cancel</button>
         </li>
     </ul>`
