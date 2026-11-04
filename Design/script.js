@@ -1,5 +1,4 @@
 const form = document.getElementById("bookingform");
-const message = document.getElementById("booking-message");
 const submitButton = form.querySelector('button[type="submit"]');
 
 async function requestJson(url, options) {
@@ -17,13 +16,10 @@ form.addEventListener("submit", async function(event) {
     const title = document.querySelector('input[name="title"]:checked');
     const firstName = document.getElementById("fname").value.trim();
     const lastName = document.getElementById("lname").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
     const checkIn = document.getElementById("checkin").value;
     const checkOut = document.getElementById("checkout").value;
     const requestedRoomType = document.getElementById("room").value.toLowerCase();
 
-    message.textContent = "Checking room availability...";
     submitButton.disabled = true;
 
     try {
@@ -37,17 +33,17 @@ form.addEventListener("submit", async function(event) {
         }
 
         const customers = await requestJson("/customers");
-        let customer = customers.find(
-            (item) => item.customer_email.toLowerCase() === email.toLowerCase()
-        );
-
+        const fullName = `${firstName} ${lastName}`.trim().toLowerCase();
+        const titledName = [title?.value, firstName, lastName]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
+        const customer = customers.find((item) => {
+            const customerName = item.name.trim().toLowerCase();
+            return customerName === fullName || customerName === titledName;
+        });
         if (!customer) {
-            const name = [title?.value, firstName, lastName].filter(Boolean).join(" ");
-            customer = await requestJson("/customers", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name, customer_email: email, customer_phone: phone })
-            });
+            throw new Error("Customer not found. Please register the customer before booking.");
         }
 
         const booking = await requestJson("/hotel/bookings", {
@@ -61,9 +57,9 @@ form.addEventListener("submit", async function(event) {
             })
         });
 
-        message.textContent = `Booking #${booking.booking_id} created (${booking.status}). Room ${room.room_number}.`;
+        window.alert(`Booking #${booking.booking_id} created (${booking.status}). Room ${room.room_number}.`);
     } catch (error) {
-        message.textContent = error.message;
+        window.alert(error.message);
     } finally {
         submitButton.disabled = false;
     }
