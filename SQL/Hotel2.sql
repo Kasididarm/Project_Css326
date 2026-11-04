@@ -4,7 +4,7 @@ SELECT * FROM customer WHERE customer_email = 'alice@email.com';
 
 SELECT * FROM room_type WHERE name = 'Standard';
 
-UPDATE booking SET check_in_date = ?, check_out_date = ? WHERE id = ?;
+UPDATE booking SET check_in_date = '2026-12-10', check_out_date = '2026-12-12' WHERE id = 1;
 
 SELECT * FROM booking WHERE customer_id = 'alice@email.com' AND room_id = ?;
 
