@@ -14,4 +14,4 @@ UPDATE payment SET amount = 150.00, payment_date = '2023-10-01' WHERE id = 1;
 
 SELECT * FROM room WHERE room_number = 101 AND status = 'available';
 
-UPDATE room SET status = 'available' WHERE room_number = 101;
+UPDATE room SET status = 'available' WHERE room_number = ?;
