@@ -32,4 +32,3 @@ INSERT INTO payment(booking_id, amount, payment_date) VALUES
 INSERT INTO admin(id, name, admin_email, admin_phone) VALUES
     (1, 'admin',   'admin@email.com',   '555-0000'),
     (2, 'manager', 'manager@email.com', '555-1111');
-SELECT name, description, price FROM hotel.room_type;
