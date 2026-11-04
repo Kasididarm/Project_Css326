@@ -31,3 +31,11 @@ button:active {
     background-color:#1b4235;
     color:#ff3131;
 }
+nav a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    }
+nav a:hover {
+  background-color: #555;
+}

@@ -93,3 +93,11 @@ h1 {
     background-color: #e5c76b;
     color: #1f2928;
 }
+nav a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    }
+nav a:hover {
+  background-color: #555;
+}
