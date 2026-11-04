@@ -1,4 +1,4 @@
-const pool = require('../db');
+const pool = require('../../../db');
 const wrap = (fn) => async (req, res) => {
 
   try {

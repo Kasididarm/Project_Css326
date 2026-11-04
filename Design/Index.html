@@ -48,6 +48,16 @@
                         <input type="text" id="lname" name="lname" placeholder="potter" required>
                     </div>
 
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" maxlength="50" required>
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" maxlength="15" required>
+                    </div>
+
                     <div class="booking_date">
                         <h2><label for="checkin">Check In</label></h2>
                         <input type="date" id="checkin" name="checkin" required>
@@ -69,6 +79,8 @@
                     <div>
                         <button type="submit">Submit</button>
                     </div>
+
+                    <p id="booking-message" role="status" aria-live="polite"></p>
 
                 </section>
             </form>

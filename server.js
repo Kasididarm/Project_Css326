@@ -8,7 +8,8 @@ const customersRouter = require('./routes/customer');
 const app = express(); 
 
 app.use(express.json()); 
-app.use(express.static(path.join(__dirname, 'public'))); // Front-end entry point
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'Design', 'Index.html')));
+app.use(express.static(path.join(__dirname, 'Design')));
 
 // Updated API routes for a Hotel System
 app.use('/hotel', hotelRouter); 
