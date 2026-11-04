@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 USE hotel;
 
 INSERT INTO room_type(id, name, description, price) VALUES

@@ -15,32 +15,9 @@
                 </ul>
             </nav>
    </div>
-   <ul class="list">
-     <li class="standradroom" onclick="room()">
-        <h2>Standrad Room</h2>
-        <img src="messageImage_1793708464561.jpg"/>
-        
-    </li>
-    <li class="DeluxRoom" onclick="room()">
-        <h2>Delux Room</h2>
-        <img src="messageImage_1793708743049.jpg"/>
-    </li>
-    <li class="Superiorroom" onclick="room()">
-        <h2>Superior Room</h2>
-        <img src="images.jpg"/>
-    </li>
-    <li class="suitedroom" onclick="room()">
-        <h2>Suited Room</h2>
-        <img src="images (1).jpg"/>
-    </li>
-    <li class="studioroom" onclick="room()">
-        <h2>Studio Room</h2>
-        <img src="images (2).jpg"/>
-    </li>
-   </ul>
+   <p id="room-type-message" role="status">Loading room types...</p>
+   <ul class="list" id="room-type-list"></ul>
 
+   <script src="typeroom.js"></script>
 </body>
-<script src="typeroom.js">
-    
-</script>
-</html> 
+</html>
