@@ -10,6 +10,7 @@ const app = express();
 app.use(express.json()); 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'Design', 'Index.html')));
 app.use(express.static(path.join(__dirname, 'Design')));
+app.use('/Design', express.static(path.join(__dirname, 'Design')));
 app.use('/Design2', express.static(path.join(__dirname, 'Design2')));
 
 // Updated API routes for a Hotel System
