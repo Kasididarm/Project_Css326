@@ -10,17 +10,32 @@ async function requestJson(url, options) {
     return data;
 }
 
+
 form.addEventListener("submit", async function(event) {
     event.preventDefault();
 
     const title = document.querySelector('input[name="title"]:checked');
+
     const firstName = document.getElementById("fname").value.trim();
     const lastName = document.getElementById("lname").value.trim();
+
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+
     const checkIn = document.getElementById("checkin").value;
     const checkOut = document.getElementById("checkout").value;
-    const requestedRoomType = document.getElementById("room").value.toLowerCase();
+
+    const requestedRoomType =
+        document.getElementById("room").value.toLowerCase();
 
     submitButton.disabled = true;
+    sessionStorage.setItem("firstName", firstName);
+    sessionStorage.setItem("lastName", lastName);
+    sessionStorage.setItem("email", email);
+    sessionStorage.setItem("phone", phone);
+
+window.location.href =
+    `hotel.html?check_in=${checkIn}&check_out=${checkOut}&room_type=${requestedRoomType}`;
 
     try {
         const query = new URLSearchParams({ check_in: checkIn, check_out: checkOut });
@@ -58,6 +73,8 @@ form.addEventListener("submit", async function(event) {
         });
 
         window.alert(`Booking #${booking.booking_id} created (${booking.status}). Room ${room.room_number}.`);
+        
+        
     } catch (error) {
         window.alert(error.message);
     } finally {

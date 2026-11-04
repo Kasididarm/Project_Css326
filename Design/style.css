@@ -73,13 +73,24 @@ button:active {
     margin-top: 10px;
     padding:8px;
     width: 400px;
-
 }
 
 #lname {
     margin-top: 15px;
     padding:8px;
     width: 400px;
+}
+
+#phone {
+    margin-top: 10px;
+    padding:8px;
+    width: 100%;
+}
+
+#email {
+    margin-top: 10px;
+    padding:8px;
+    width: 100%;
 }
 
 #checkin {

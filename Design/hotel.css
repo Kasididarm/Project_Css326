@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    background-color: #ead1c2;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #173f35;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 20px;
+}
+
+#searchSummary {
+    width: 800px;
+    max-width: 90%;
+    margin: 30px auto 20px auto;
+}
+
+#roomList {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.room-card {
+    width: 800px;
+    max-width: 90%;
+
+    display: flex;
+
+    background-color: #1f2928;
+    color: white;
+
+    padding: 18px;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.room-image {
+    width: 50%;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+}
+
+.room-info {
+    width: 50%;
+
+    padding: 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.room-info h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+
+.room-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.book-btn {
+    margin-top: 25px;
+
+    padding: 12px 25px;
+
+    background-color: transparent;
+    color: #e5c76b;
+
+    border: 2px solid #e5c76b;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+.book-btn:hover {
+    background-color: #e5c76b;
+    color: #1f2928;
+}

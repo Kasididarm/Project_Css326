@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Available Rooms</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+
+<body>
+
+    <h1>Available Rooms</h1>
+
+    <section id="searchSummary">
+        <p>Check in: <span id="showCheckin"></span></p>
+        <p>Check out: <span id="showCheckout"></span></p>
+        <p>Room type: <span id="showRoomType"></span></p>
+    </section>
+
+    <section id="roomList">
+
+    </section>
+
+    <section id="myBooking">
+
+    </section>
+
+    <input type="date" id="newCheckin">
+    <input type="date" id="newCheckout">
+
+    <button onclick="changeDate()">
+        Change Date
+    </button>
+    <script src="hotel.js"></script>
+
+</body>
+
+</html>
